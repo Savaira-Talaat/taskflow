@@ -12,7 +12,7 @@ namespace TaskFlow.Data
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         public DbSet<User> Users { get; set; }
         public DbSet<Project> Projects { get; set; }
-        public DbSet<Models.Task> Tasks { get; set; }
+        public DbSet<TaskFlow2.Models.Task> Tasks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,11 +24,11 @@ namespace TaskFlow.Data
                 .Property(u => u.Role)
                 .HasConversion<string>();
 
-            modelBuilder.Entity<Models.Task>()
+            modelBuilder.Entity<TaskFlow2.Models.Task>()
                 .Property(t => t.Status)
                 .HasConversion<string>();
 
-            modelBuilder.Entity<Models.Task>()
+            modelBuilder.Entity<TaskFlow2.Models.Task>()
                 .Property(t => t.Comments)
                 .HasConversion(
                     v => string.Join("||", v),

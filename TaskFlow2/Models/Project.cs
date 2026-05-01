@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
+using TaskFlow2.Models;
 
 namespace TaskFlow.Models
 {
@@ -16,6 +17,6 @@ namespace TaskFlow.Models
 
         public int UserId { get; set; }
         public User User { get; set; } = null!;
-        public ICollection<Task> Tasks { get; set; } = new List<Task>();
+        public ICollection<TaskFlow2.Models.Task> Tasks { get; set; } = new List<TaskFlow2.Models.Task>();
     }
 }

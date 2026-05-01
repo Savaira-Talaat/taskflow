@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
+using TaskFlow.Models;
 
-namespace TaskFlow.Models
+namespace TaskFlow2.Models
 {
     public class Task
     {
