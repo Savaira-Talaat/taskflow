@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using TaskFlow2.Models.DTOs;
@@ -8,7 +9,7 @@ namespace TaskFlow2.Controllers
 {
     [ApiController]
     [Route("api/tasks")]
-    
+    [Authorize]
     public class TasksController : ControllerBase
     {
         private readonly ITaskService _taskService;
