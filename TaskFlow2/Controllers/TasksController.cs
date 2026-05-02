@@ -8,7 +8,7 @@ namespace TaskFlow2.Controllers
 {
     [ApiController]
     [Route("api/tasks")]
-    // TODO: [Authorize] faudra l'activer quand le JWT sera pret
+    
     public class TasksController : ControllerBase
     {
         private readonly ITaskService _taskService;
